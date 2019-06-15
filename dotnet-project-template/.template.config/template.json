@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Karl Andin",
+  "classifications": [
+    "Web",
+    "React",
+    "Typescript"
+  ],
+  "name": "Karl Andin's ASP.NET Core with React and Typescript",
+  "shortName": "ka-react-typescript",
+  "identity": "KarlAndin.DotNet.Web.ProjectTemplates.ReactTypescript",
+  "sourceName": "React.Web",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "preferNameDirectory": true,
+  "postActions": [
+    {
+      "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+      "args": {
+        "executable": "node",
+        "args": "template-scripts/setup.js",
+        "redirectStandardOutput": "false"
+      },
+      "manualInstructions": [
+        {
+          "text": "Run 'node template-scripts/setup.js'"
+        }
+      ],
+      "continueOnError": false,
+      "description": "Init git repo and create client app."
+    },
+    {
+      "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+      "args": {
+        "executable": "rm",
+        "args": "-r template-scripts/",
+        "redirectStandardOutput": "false"
+      },
+      "manualInstructions": [
+        {
+          "text": "Run 'rm -r template-scripts/'"
+        }
+      ],
+      "continueOnError": false,
+      "description": "Cleanup. Remove template scripts."
+    }
+  ],
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [ "README.md" ]
+        }
+      ]
+    }
+  ]
+}
