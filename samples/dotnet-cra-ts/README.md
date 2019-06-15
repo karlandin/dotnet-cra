@@ -1,1 +1,1 @@
-dotnet new react but with CRA 2 and Typescript
+Old sample created by the standare dotnet react template `dotnet new react` and then manually adjusted to use typescript.
