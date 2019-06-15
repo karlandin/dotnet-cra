@@ -1,0 +1,36 @@
+{
+  "name": "@karlandin/react-scripts",
+  "version": "0.0.1",
+  "description": "Configuration and scripts for Create React App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karlandin/dotnet-cra"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.10"
+  },
+  "files": [
+    "config",
+    "scripts",
+    "template",
+    "utils"
+  ],
+  "dependencies": {
+    "fs-extra": "7.0.1",
+    "react-dev-utils": "^9.0.1",
+    "resolve": "1.10.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

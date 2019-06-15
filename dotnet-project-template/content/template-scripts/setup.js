@@ -28,13 +28,13 @@ if (!isInGitRepository()) {
 
 console.log(`\nCreating react app using CRA...`);
 if (shouldUseYarn()) {
-    execSync('yarn create react-app client-app --typescript', { stdio: 'inherit' });
+    execSync('yarn create react-app client-app --scripts-version file:template-scripts/react-scripts/ --typescript', { stdio: 'inherit' });
 } else {
-    execSync('npm init react-app client-app --typescript', { stdio: 'inherit' });
+    execSync('npm init react-app client-app --scripts-version file:template-scripts/react-scripts/ --typescript', { stdio: 'inherit' });
 }
 
 console.log(`\nCommitting generated project...`);
-execSync('git add -A', { stdio: 'ignore' });
+execSync('git add .', { stdio: 'ignore' });
 execSync('git reset template-scripts/', { stdio: 'ignore' });
 execSync('git commit -m "Dotnet project and react-app created by template from https://github.com/karlandin/dotnet-cra."', { stdio: 'ignore' });
 
