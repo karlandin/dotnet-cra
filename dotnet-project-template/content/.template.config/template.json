@@ -8,7 +8,7 @@
   ],
   "name": "Karl Andin's ASP.NET Core with React and Typescript",
   "shortName": "ka-react-typescript",
-  "identity": "KarlAndin.DotNet.Web.ProjectTemplates.ReactTypescript",
+  "identity": "KarlAndin.ProjectTemplates.ReactTypescript",
   "sourceName": "React.Web",
   "tags": {
     "language": "C#",
@@ -45,15 +45,6 @@
       ],
       "continueOnError": false,
       "description": "Cleanup. Remove template scripts."
-    }
-  ],
-  "sources": [
-    {
-      "modifiers": [
-        {
-          "exclude": [ "README.md" ]
-        }
-      ]
     }
   ]
 }

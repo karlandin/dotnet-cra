@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>KarlAndin.ProjectTemplates.ReactTypescript</id>
+    <version>0.0.1</version>
+    <description>
+      Creates dotnet web app with react/typescript client app.
+    </description>
+    <authors>Karl Andin</authors>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file src="content/**" exclude="**\bin\**\*;**\obj\**\*" target="content" />
+  </files>
+</package>
