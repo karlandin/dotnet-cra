@@ -100,6 +100,7 @@ module.exports = function (
     build: 'react-scripts build',
     test: 'react-scripts test',
     eject: 'react-scripts eject',
+    'generate-api-client': 'autorest --typescript --input-file=../swagger.json --output-folder=src/generated/api-client/ --generate-metadata=false'
   };
 
   // Setup the eslint config
@@ -180,6 +181,7 @@ module.exports = function (
 
   // Additional dependencies for our template
   installDependencies.push('react-router-dom', 'bootstrap', 'reactstrap', '@types/react-router-dom', '@types/reactstrap');
+  installDependencies.push('autorest', '@azure/ms-rest-js');
 
   console.log();
   console.log(`Installing additional dependencies ${chalk.cyan(installDependencies.join(', '))}.`);
