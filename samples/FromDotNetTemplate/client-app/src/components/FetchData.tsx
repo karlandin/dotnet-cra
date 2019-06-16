@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
-
-type WeatherForecast = {
-  dateFormatted: string,
-  temperatureC: number,
-  temperatureF: number,
-  summary: string
-}
-
+import { WeatherForecast } from '../generated/api-client/lib/models';
+import { MyAPI } from '../generated/api-client/lib/myAPI';
 
 type ForecastsTableProps = { forecasts: WeatherForecast[] };
 export const ForecastsTable: React.FC<ForecastsTableProps> = ({ forecasts }) => {
@@ -48,14 +41,14 @@ export const FetchData: React.FC = () => {
 
   useEffect(() => {
 
-    fetch('api/SampleData/WeatherForecasts')
-      .then(response => response.json())
+    new MyAPI({ baseUri: '/' }).weatherForecasts()
       .then(data => {
         setState({ forecasts: data, loading: false, error: false });
       })
       .catch(error => {
         setState({ forecasts: [], loading: false, error: true });
       });
+
   }, []);
 
   return (

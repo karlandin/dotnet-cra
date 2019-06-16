@@ -1,6 +1,10 @@
 # dotnet-cra
 
-ASP.NET Core project template with React and Typescript.
+ASP.NET Core project template with
+* React Typescript (create-react-app)
+* REST api with Swagger (Swashbuckle.AspNetCore)
+* Generated Typescript client (autorest)
+* Bootstrap (reactstrap)
 
 ## Usage
 * Download latest template nuget package from https://github.com/karlandin/dotnet-cra/tree/master/dist 

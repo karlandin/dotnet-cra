@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "24.0.14",
+    "@azure/ms-rest-js": "^1.8.13",
+    "@types/jest": "24.0.15",
     "@types/node": "12.0.8",
     "@types/react": "16.8.20",
     "@types/react-dom": "16.8.4",
     "@types/react-router-dom": "^4.3.4",
     "@types/reactstrap": "^8.0.1",
+    "autorest": "^2.0.4283",
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -21,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-api-client": "autorest --typescript --input-file=../swagger.json --output-folder=src/generated/api-client/ --generate-metadata=false"
   },
   "eslintConfig": {
     "extends": "react-app"
