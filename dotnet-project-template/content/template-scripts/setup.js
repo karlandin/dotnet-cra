@@ -33,6 +33,16 @@ if (shouldUseYarn()) {
     execSync('npm init react-app client-app --scripts-version file:template-scripts/react-scripts/ --typescript', { stdio: 'inherit' });
 }
 
+console.log(`\nBuilding dotnet project...`);
+execSync('dotnet build React.Web/React.Web.csproj', { stdio: 'inherit' });
+
+console.log(`\nGenerating api client...`);
+if (shouldUseYarn()) {
+    execSync('cd client-app; yarn generate-api-client', { stdio: 'inherit' });
+} else {
+    execSync('cd client-app; npm run generate-api-client', { stdio: 'inherit' });
+}
+
 console.log(`\nCommitting generated project...`);
 execSync('git add .', { stdio: 'ignore' });
 execSync('git reset template-scripts/', { stdio: 'ignore' });
