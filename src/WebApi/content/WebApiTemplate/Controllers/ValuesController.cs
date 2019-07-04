@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using JsonFlatFileDataStore;
 using Microsoft.AspNetCore.Mvc;
+using WebApiTemplate.Models;
 
 namespace WebApiTemplate.Controllers
 {
@@ -10,36 +11,47 @@ namespace WebApiTemplate.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        // GET api/values
+        private readonly IDataStore _dataStore;
+
+        public ValuesController(IDataStore dataStore)
+        {
+            _dataStore = dataStore;
+        }
+
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<Value>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var collection = _dataStore.GetCollection<Value>();
+            return collection.AsQueryable().ToList();
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Value> Get(int id)
         {
-            return "value";
+            var collection = _dataStore.GetCollection<Value>();
+            return collection.Find(x => x.Id == id).SingleOrDefault();
         }
 
-        // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task Post([FromBody] Value value)
         {
+            var collection = _dataStore.GetCollection<Value>();
+            await collection.InsertOneAsync(new Value { Data = value.Data });
         }
 
-        // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Value value)
         {
+            var collection = _dataStore.GetCollection<Value>();
+            collection.UpdateOneAsync(id, value);
+
         }
 
-        // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
+            var collection = _dataStore.GetCollection<Value>();
+            await collection.DeleteOneAsync(id);
         }
     }
 }
