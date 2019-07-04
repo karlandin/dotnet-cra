@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Karl Andin",
+  "classifications": [
+    "WebApi"
+  ],
+  "name": "Karl Andin's ASP.NET Core WebApi",
+  "shortName": "ka-webapi",
+  "identity": "KarlAndin.ProjectTemplates.WebApi",
+  "sourceName": "WebApiTemplate",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "preferNameDirectory": true
+}

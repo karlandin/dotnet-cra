@@ -1,1 +1,1 @@
-`nuget pack ../dotnet-project-template/KarlAndin.ProjectTemplates.ReactTypescript.nuspec`
+nuget pack ../src/KarlAndin.ProjectTemplates.nuspec

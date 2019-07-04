@@ -1,0 +1,12 @@
+{
+  "value": [
+    {
+      "id": 1,
+      "data": "value1"
+    },
+    {
+      "id": 2,
+      "data": "value2"
+    }
+  ]
+}
