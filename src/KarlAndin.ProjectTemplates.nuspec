@@ -12,6 +12,6 @@
     </packageTypes>
   </metadata>
   <files>
-    <file src="content/**" exclude="**\bin\**\*;**\obj\**\*;**\.DS_Store" target="content" />
+    <file src="content/**" exclude="**\bin\**\*;**\obj\**\*;**\.DS_Store;**\.idea\**\*;**\.vscode\**\*;" target="content" />
   </files>
 </package>
