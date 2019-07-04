@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@azure/ms-rest-js": "^1.8.13",
+    "@azure/ms-rest-js": "^2.0.1",
     "@types/jest": "24.0.15",
-    "@types/node": "12.0.8",
-    "@types/react": "16.8.20",
+    "@types/node": "12.0.12",
+    "@types/react": "16.8.23",
     "@types/react-dom": "16.8.4",
     "@types/react-router-dom": "^4.3.4",
     "@types/reactstrap": "^8.0.1",
