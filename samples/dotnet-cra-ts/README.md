@@ -1,1 +1,0 @@
-Old sample created by the standare dotnet react template `dotnet new react` and then manually adjusted to use typescript.
